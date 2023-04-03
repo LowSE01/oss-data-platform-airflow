@@ -93,7 +93,7 @@ class LayerDbt(LayerBase):
 
     def command(self, layer_name, domain_name, table_name):
         return " && ".join([
-            f"cd /var/apps/dbt",
+            f"cd /var/apps/dbt/{layer_name}",
             " ".join([
                 f"dbt",
                 f"run",
@@ -111,7 +111,9 @@ with dag:
 
     with TaskGroup(group_id=f"Transform"):
         datawarehouse   = LayerDbt("datawarehouse")
+        datamart        = LayerDbt("datamart")
 
     entry >> datalake.entry
     datalake.exit >> datawarehouse.entry
-    datawarehouse.exit >> exit
+    datawarehouse.exit >> datamart.entry
+    datamart.exit >> exit
