@@ -1,0 +1,4 @@
+domains:
+  - name: sample_superstore
+    tables:
+      - name: orders

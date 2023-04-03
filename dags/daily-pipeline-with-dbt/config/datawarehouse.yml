@@ -1,0 +1,10 @@
+domains:
+  - name: sample_superstore
+    tables:
+      - name: cities
+      - name: customers
+      - name: orders
+      - name: products
+      - name: regional_managers
+      - name: returns
+      - name: ship_modes

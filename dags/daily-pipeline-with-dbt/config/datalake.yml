@@ -1,0 +1,17 @@
+domains:
+  - name: sample_superstore
+    tables:
+      - name: categories
+      - name: cities
+      - name: countries
+      - name: customers
+      - name: details
+      - name: orders
+      - name: products
+      - name: regional_managers
+      - name: regions
+      - name: returns
+      - name: segments
+      - name: ship_modes
+      - name: states
+      - name: sub_categories
