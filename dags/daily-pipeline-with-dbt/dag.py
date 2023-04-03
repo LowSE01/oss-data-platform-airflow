@@ -97,10 +97,7 @@ class LayerDbt(LayerBase):
             " ".join([
                 f"dbt",
                 f"run",
-                f"--profiles-dir",
-                f"./profiles",
-                f"--select",
-                f"{domain_name}_{table_name}",
+                f"--select {layer_name}.{domain_name}_{table_name}",
             ])
         ])
 
