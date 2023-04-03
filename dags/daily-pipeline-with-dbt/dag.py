@@ -97,7 +97,7 @@ class LayerDbt(LayerBase):
             " ".join([
                 f"dbt",
                 f"run",
-                f"--select {layer_name}.{domain_name}_{table_name}",
+                f"--select {domain_name}_{table_name}",
             ])
         ])
 
